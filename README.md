@@ -48,6 +48,5 @@ Here are the dependencies for using Guava cache:
 
 For more detailed information please read the following documentations: 
 
-    https://docs.spring.io/spring/docs/current/spring-framework-reference/integration.html#cache
-
-    https://github.com/google/guava/wiki/CachesExplained
+- https://docs.spring.io/spring/docs/current/spring-framework-reference/integration.html#cache
+- https://github.com/google/guava/wiki/CachesExplained
