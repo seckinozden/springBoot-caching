@@ -1,0 +1,11 @@
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+
+    <cache name="customers"
+           maxElementsInMemory="2"
+           overflowToDisk="true"
+           eternal="false"
+           timeToLiveSeconds="10"/>
+    <!-- eternal attribute - if true indicates that mappings never expire -->
+    <!-- timeToLiveSeconds="27000" - Expire in 45 minutes -->
+</ehcache>
