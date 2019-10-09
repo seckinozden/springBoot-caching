@@ -33,7 +33,7 @@ Here is the sample method for demonstating the usage of @Cacheable.
 Cache name on @Cacheable annotation should be the same name defined in `ehcache.xml`
 
 ```java
-  //Do not cache when Customer Id equals 2
+  //Do not cache when returned Customer's id equals 2
   @Cacheable(value="customers", unless="#result.id==2")
   public Customer getById(Long id) {
     logger.info("Fetching Customer from repository.. Id: {}", id);
