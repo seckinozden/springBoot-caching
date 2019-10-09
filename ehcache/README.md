@@ -26,3 +26,17 @@ When EhCache dependencies are recognized, spring boot will detect the `ehcache.x
     <!-- timeToLiveSeconds="27000" - Expire in 45 minutes -->
 </ehcache>
 ```
+
+
+
+Here is the sample method for demonstating the usage of @Cacheable. 
+Cache name on @Cacheable annotation should be the same name defined in `ehcache.xml`
+
+```java
+  //Do not cache when Customer Id equals 2
+  @Cacheable(value="customers", unless="#result.id==2")
+  public Customer getById(Long id) {
+    logger.info("Fetching Customer from repository.. Id: {}", id);
+    return new Customer(id, "Name-" + id, "Surname-" + id);
+  }
+```
